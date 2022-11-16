@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework2</title>
+</head>
+<body>
+<script>
+    const input = prompt('Enter the number you want that includes at least 4 characters!');
+    const inputString = input.toString();
+    const result = inputString[0];
+    console.log(result);
+    for (let x =1; x < result.length; x++){
+        if (inputString[x-1] % 2 === 0 && inputString[x] % 2 === 0)
+            result.push('=', inputString[x]);
+        if (inputString[x-1] % 2 !== 0 && inputString[x] % 2 !== 0)
+            result.push( inputString[x]);
+
+    }
+    console.log(result.join())
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+  <lable>Type the word: </lable>
+  <input type="text" class="getWord">
+  <button onclick="output()">Translate</button>
+  <script>
+    let english = ['elephant', 'zebra', 'crocodile', 'ell', 'duck'];
+    let vietNam = ['voi', 'ngua van', 'ca sau', 'luon', 'vit'];
+    let result = -1;
+
+    function find() {
+        let input = document.getElementsByClassName('getWord')[0];
+        for (i = 0; i < english.length; i++) {
+             if (input.value == english[i])
+                 result = i;
+        }
+    }
+
+    function output() {
+        find()
+        if (result == -1){
+            document.write('The work has not been updated yet! ') ;
+        } else
+            document.write(vietNam[result]);
+
+    }
+  </script>
+</body>
+</html>

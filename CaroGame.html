@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaroGame</title>
+</head>
+<body>
+  <h1>Caro Game</h1> <br>
+  <div class="array"></div>
+  <br>
+  <input type="button" class="saveChange" value="Save change" onclick="changeValue()">
+
+  <script>
+    let square = new Array(5);
+    console.log(square)
+    var result = '';
+
+    for (let i = 0; i < 5; i++){
+      square[i] = new Array(5);
+        for (let j = 0; j < 5; j++){
+            square[i][j] = '[]';
+            result += square[i][j];
+
+        }
+        result += '</br>'
+    }
+    console.log(square);
+    document.querySelector('.array').innerHTML = result;
+
+    function changeValue(){
+        let x = +prompt('Enter x');
+        let y = +prompt('Enter y');
+        square[x][y] = '0';
+        document.write(result);
+    }
+  </script>
+</body>
+</html>
